@@ -1,0 +1,11 @@
+Core/Src/main.c:82:compute_crc16	20	static
+Core/Src/main.c:96:xor_cipher	20	static
+Core/Src/main.c:113:main	24	static
+Core/Src/main.c:179:SystemClock_Config	96	static
+Core/Src/main.c:366:Error_Handler	0	static
+Core/Src/main.c:276:HAL_GPIO_EXTI_Callback	8	static
+Core/Src/main.c:286:process_received_frame	48	static
+Core/Src/main.c:341:HAL_UART_RxCpltCallback	24	static
+Core/Src/main.c:0:OUTLINED_FUNCTION_0	0	static
+Core/Src/main.c:0:OUTLINED_FUNCTION_1	0	static
+Core/Src/main.c:0:OUTLINED_FUNCTION_2	0	static

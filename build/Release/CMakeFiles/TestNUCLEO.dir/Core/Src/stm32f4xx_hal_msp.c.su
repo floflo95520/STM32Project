@@ -1,0 +1,4 @@
+Core/Src/stm32f4xx_hal_msp.c:62:HAL_MspInit	8	static
+Core/Src/stm32f4xx_hal_msp.c:87:HAL_UART_MspInit	32	static
+Core/Src/stm32f4xx_hal_msp.c:153:HAL_UART_MspDeInit	16	static
+Core/Src/stm32f4xx_hal_msp.c:0:OUTLINED_FUNCTION_0	0	static
