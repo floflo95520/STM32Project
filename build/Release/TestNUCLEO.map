@@ -1,8 +1,8 @@
 STMicroelectronics Memory Configuration
 
 Name     Origin   Length   Bytes-Used %age-Used Attributes
-RAM 0x20000000 0x020000 0x0006d8        1%  rwx     
-FLASH 0x8000000 0x080000 0x00199c        1%  rx      
+RAM 0x20000000 0x020000 0x0006d0        1%  rwx     
+FLASH 0x8000000 0x080000 0x0017a4        1%  rx      
 
      VMA      LMA     Size Align Out     In      Symbol
        0        0        0     1 _estack = ORIGIN(RAM) + LENGTH(RAM)
@@ -14,7 +14,7 @@ FLASH 0x8000000 0x080000 0x00199c        1%  rx
  8000000  8000000      1c4     1         CMakeFiles/TestNUCLEO.dir/startup_stm32f446xx.s.obj:(.isr_vector)
  8000000  8000000      1c4     1                 g_pfnVectors
  80001c4  80001c4        0     1         . = ALIGN(4)
- 80001c4  80001c4     179c     4 .text
+ 80001c4  80001c4     15a8     4 .text
  80001c4  80001c4        0     1         . = ALIGN(4)
  80001c4  80001c4       14     4         /Users/matiasvinkovic/Library/Application Support/stm32cube/bundles/st-arm-clang/21.1.1+st.7/bin/../lib/clang-runtimes/arm-none-eabi/armv7m_hard_fpv4_sp_d16_exn_rtti_unaligned_size/lib/libclang_rt.builtins.a(aeabi_uldivmod.S.obj):(.text)
  80001c4  80001c4        0     1                 $t
@@ -30,463 +30,449 @@ FLASH 0x8000000 0x080000 0x00199c        1%  rx
  8000210  8000210        0     1                 $t
  8000211  8000211       c4     1                 UART_SetConfig
  80002cc  80002cc        0     1                 $d
- 80002d4  80002d4       aa     2         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj:(.text.HAL_UART_Transmit)
+ 80002d4  80002d4       22     2         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj:(.text.HAL_UART_Receive_IT)
  80002d4  80002d4        0     1                 $t
- 80002d5  80002d5       aa     1                 HAL_UART_Transmit
- 800037e  800037e       7e     2         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj:(.text.UART_WaitOnFlagUntilTimeout)
- 800037e  800037e        0     1                 $t
- 800037f  800037f       7e     1                 UART_WaitOnFlagUntilTimeout
- 80003fc  80003fc       22     2         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj:(.text.HAL_UART_Receive_IT)
- 80003fc  80003fc        0     1                 $t
- 80003fd  80003fd       22     1                 HAL_UART_Receive_IT
- 800041e  800041e       32     2         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj:(.text.UART_Start_Receive_IT)
- 800041e  800041e        0     1                 $t
- 800041f  800041f       32     1                 UART_Start_Receive_IT
- 8000450  8000450       5a     2         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj:(.text.UART_EndRxTransfer)
- 8000450  8000450        0     1                 $t
- 8000451  8000451       5a     1                 UART_EndRxTransfer
- 80004ac  80004ac      2a4     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj:(.text.HAL_UART_IRQHandler)
- 80004ac  80004ac        0     1                 $t
- 80004ad  80004ad      2a4     1                 HAL_UART_IRQHandler
- 800074c  800074c        0     1                 $d
- 8000750  8000750       c4     2         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj:(.text.UART_Receive_IT)
+ 80002d5  80002d5       22     1                 HAL_UART_Receive_IT
+ 80002f6  80002f6       32     2         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj:(.text.UART_Start_Receive_IT)
+ 80002f6  80002f6        0     1                 $t
+ 80002f7  80002f7       32     1                 UART_Start_Receive_IT
+ 8000328  8000328       5a     2         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj:(.text.UART_EndRxTransfer)
+ 8000328  8000328        0     1                 $t
+ 8000329  8000329       5a     1                 UART_EndRxTransfer
+ 8000384  8000384      2a4     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj:(.text.HAL_UART_IRQHandler)
+ 8000384  8000384        0     1                 $t
+ 8000385  8000385      2a4     1                 HAL_UART_IRQHandler
+ 8000624  8000624        0     1                 $d
+ 8000628  8000628       c4     2         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj:(.text.UART_Receive_IT)
+ 8000628  8000628        0     1                 $t
+ 8000629  8000629       c4     1                 UART_Receive_IT
+ 80006ec  80006ec        a     2         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj:(.text.UART_DMAAbortOnError)
+ 80006ec  80006ec        0     1                 $t
+ 80006ed  80006ed        a     1                 UART_DMAAbortOnError
+ 80006f6  80006f6        2     2         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj:(.text.HAL_UART_ErrorCallback)
+ 80006f6  80006f6        0     1                 $t
+ 80006f7  80006f7        2     1                 HAL_UART_ErrorCallback
+ 80006f8  80006f8        2     2         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj:(.text.HAL_UARTEx_RxEventCallback)
+ 80006f8  80006f8        0     1                 $t
+ 80006f9  80006f9        2     1                 HAL_UARTEx_RxEventCallback
+ 80006fa  80006fa        2     2         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj:(.text.HAL_UART_TxCpltCallback)
+ 80006fa  80006fa        0     1                 $t
+ 80006fb  80006fb        2     1                 HAL_UART_TxCpltCallback
+ 80006fc  80006fc       16     2         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj:(.text.OUTLINED_FUNCTION_0)
+ 80006fc  80006fc        0     1                 $t
+ 80006fd  80006fd       16     1                 OUTLINED_FUNCTION_0
+ 8000712  8000712       1a     2         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj:(.text.OUTLINED_FUNCTION_1)
+ 8000712  8000712        0     1                 $t
+ 8000713  8000713       1a     1                 OUTLINED_FUNCTION_1
+ 800072c  800072c        c     2         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj:(.text.OUTLINED_FUNCTION_2)
+ 800072c  800072c        0     1                 $t
+ 800072d  800072d        c     1                 OUTLINED_FUNCTION_2
+ 8000738  8000738        a     2         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj:(.text.OUTLINED_FUNCTION_4)
+ 8000738  8000738        0     1                 $t
+ 8000739  8000739        a     1                 OUTLINED_FUNCTION_4
+ 8000742  8000742        e     2         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj:(.text.OUTLINED_FUNCTION_5)
+ 8000742  8000742        0     1                 $t
+ 8000743  8000743        e     1                 OUTLINED_FUNCTION_5
+ 8000750  8000750        a     2         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj:(.text.OUTLINED_FUNCTION_6)
  8000750  8000750        0     1                 $t
- 8000751  8000751       c4     1                 UART_Receive_IT
- 8000814  8000814        a     2         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj:(.text.UART_DMAAbortOnError)
- 8000814  8000814        0     1                 $t
- 8000815  8000815        a     1                 UART_DMAAbortOnError
- 800081e  800081e        2     2         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj:(.text.HAL_UART_ErrorCallback)
- 800081e  800081e        0     1                 $t
- 800081f  800081f        2     1                 HAL_UART_ErrorCallback
- 8000820  8000820        2     2         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj:(.text.HAL_UARTEx_RxEventCallback)
- 8000820  8000820        0     1                 $t
- 8000821  8000821        2     1                 HAL_UARTEx_RxEventCallback
- 8000822  8000822        2     2         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj:(.text.HAL_UART_TxCpltCallback)
- 8000822  8000822        0     1                 $t
- 8000823  8000823        2     1                 HAL_UART_TxCpltCallback
- 8000824  8000824       16     2         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj:(.text.OUTLINED_FUNCTION_0)
- 8000824  8000824        0     1                 $t
- 8000825  8000825       16     1                 OUTLINED_FUNCTION_0
- 800083a  800083a       1a     2         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj:(.text.OUTLINED_FUNCTION_1)
- 800083a  800083a        0     1                 $t
- 800083b  800083b       1a     1                 OUTLINED_FUNCTION_1
- 8000854  8000854        c     2         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj:(.text.OUTLINED_FUNCTION_2)
- 8000854  8000854        0     1                 $t
- 8000855  8000855        c     1                 OUTLINED_FUNCTION_2
- 8000860  8000860        a     2         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj:(.text.OUTLINED_FUNCTION_4)
- 8000860  8000860        0     1                 $t
- 8000861  8000861        a     1                 OUTLINED_FUNCTION_4
- 800086a  800086a        e     2         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj:(.text.OUTLINED_FUNCTION_5)
- 800086a  800086a        0     1                 $t
- 800086b  800086b        e     1                 OUTLINED_FUNCTION_5
- 8000878  8000878        a     2         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj:(.text.OUTLINED_FUNCTION_6)
- 8000878  8000878        0     1                 $t
- 8000879  8000879        a     1                 OUTLINED_FUNCTION_6
- 8000882  8000882        a     2         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj:(.text.OUTLINED_FUNCTION_8)
- 8000882  8000882        0     1                 $t
- 8000883  8000883        a     1                 OUTLINED_FUNCTION_8
- 800088c  800088c        8     2         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj:(.text.OUTLINED_FUNCTION_12)
- 800088c  800088c        0     1                 $t
- 800088d  800088d        8     1                 OUTLINED_FUNCTION_12
- 8000894  8000894        6     2         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj:(.text.OUTLINED_FUNCTION_14)
- 8000894  8000894        0     1                 $t
- 8000895  8000895        6     1                 OUTLINED_FUNCTION_14
- 800089a  800089a        8     2         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj:(.text.OUTLINED_FUNCTION_16)
- 800089a  800089a        0     1                 $t
- 800089b  800089b        8     1                 OUTLINED_FUNCTION_16
- 80008a4  80008a4      11c     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj:(.text.HAL_RCC_ClockConfig)
- 80008a4  80008a4        0     1                 $t
- 80008a5  80008a5      11c     1                 HAL_RCC_ClockConfig
- 80009b0  80009b0        0     1                 $d
- 80009c0  80009c0       20     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj:(.text.HAL_RCC_GetPCLK1Freq)
- 80009c0  80009c0        0     1                 $t
- 80009c1  80009c1       20     1                 HAL_RCC_GetPCLK1Freq
- 80009d4  80009d4        0     1                 $d
- 80009e0  80009e0       20     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj:(.text.HAL_RCC_GetPCLK2Freq)
- 80009e0  80009e0        0     1                 $t
- 80009e1  80009e1       20     1                 HAL_RCC_GetPCLK2Freq
- 80009f4  80009f4        0     1                 $d
- 8000a00  8000a00        a     2         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj:(.text.OUTLINED_FUNCTION_0)
- 8000a00  8000a00        0     1                 $t
- 8000a01  8000a01        a     1                 OUTLINED_FUNCTION_0
- 8000a0c  8000a0c       68     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj:(.text.HAL_RCC_GetSysClockFreq)
- 8000a0c  8000a0c        0     1                 $t
- 8000a0d  8000a0d       68     1                 HAL_RCC_GetSysClockFreq
- 8000a1c  8000a1c        0     1                 $d
- 8000a20  8000a20        0     1                 $t
- 8000a68  8000a68        0     1                 $d
- 8000a74  8000a74      344     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj:(.text.HAL_RCC_OscConfig)
- 8000a74  8000a74        0     1                 $t
- 8000a75  8000a75      344     1                 HAL_RCC_OscConfig
- 8000dac  8000dac        0     1                 $d
- 8000db8  8000db8        6     2         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj:(.text.OUTLINED_FUNCTION_1)
- 8000db8  8000db8        0     1                 $t
- 8000db9  8000db9        6     1                 OUTLINED_FUNCTION_1
- 8000dbe  8000dbe       12     2         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj:(.text.OUTLINED_FUNCTION_2)
- 8000dbe  8000dbe        0     1                 $t
- 8000dbf  8000dbf       12     1                 OUTLINED_FUNCTION_2
- 8000dd0  8000dd0        8     2         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj:(.text.OUTLINED_FUNCTION_3)
- 8000dd0  8000dd0        0     1                 $t
- 8000dd1  8000dd1        8     1                 OUTLINED_FUNCTION_3
- 8000dd8  8000dd8       10     2         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj:(.text.OUTLINED_FUNCTION_4)
- 8000dd8  8000dd8        0     1                 $t
- 8000dd9  8000dd9       10     1                 OUTLINED_FUNCTION_4
- 8000de8  8000de8        a     2         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj:(.text.OUTLINED_FUNCTION_5)
- 8000de8  8000de8        0     1                 $t
- 8000de9  8000de9        a     1                 OUTLINED_FUNCTION_5
- 8000df2  8000df2        a     2         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj:(.text.OUTLINED_FUNCTION_6)
- 8000df2  8000df2        0     1                 $t
- 8000df3  8000df3        a     1                 OUTLINED_FUNCTION_6
- 8000dfc  8000dfc      198     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj:(.text.HAL_GPIO_Init)
- 8000dfc  8000dfc        0     1                 $t
- 8000dfd  8000dfd      198     1                 HAL_GPIO_Init
- 8000f7c  8000f7c        0     1                 $d
- 8000f94  8000f94        a     2         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj:(.text.HAL_GPIO_WritePin)
- 8000f94  8000f94        0     1                 $t
- 8000f95  8000f95        a     1                 HAL_GPIO_WritePin
- 8000f9e  8000f9e       10     2         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj:(.text.HAL_GPIO_TogglePin)
- 8000f9e  8000f9e        0     1                 $t
- 8000f9f  8000f9f       10     1                 HAL_GPIO_TogglePin
- 8000fb0  8000fb0       14     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj:(.text.HAL_GPIO_EXTI_IRQHandler)
+ 8000751  8000751        a     1                 OUTLINED_FUNCTION_6
+ 800075a  800075a        a     2         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj:(.text.OUTLINED_FUNCTION_8)
+ 800075a  800075a        0     1                 $t
+ 800075b  800075b        a     1                 OUTLINED_FUNCTION_8
+ 8000764  8000764        8     2         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj:(.text.OUTLINED_FUNCTION_12)
+ 8000764  8000764        0     1                 $t
+ 8000765  8000765        8     1                 OUTLINED_FUNCTION_12
+ 800076c  800076c        6     2         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj:(.text.OUTLINED_FUNCTION_14)
+ 800076c  800076c        0     1                 $t
+ 800076d  800076d        6     1                 OUTLINED_FUNCTION_14
+ 8000772  8000772        8     2         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj:(.text.OUTLINED_FUNCTION_16)
+ 8000772  8000772        0     1                 $t
+ 8000773  8000773        8     1                 OUTLINED_FUNCTION_16
+ 800077c  800077c      11c     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj:(.text.HAL_RCC_ClockConfig)
+ 800077c  800077c        0     1                 $t
+ 800077d  800077d      11c     1                 HAL_RCC_ClockConfig
+ 8000888  8000888        0     1                 $d
+ 8000898  8000898       20     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj:(.text.HAL_RCC_GetPCLK1Freq)
+ 8000898  8000898        0     1                 $t
+ 8000899  8000899       20     1                 HAL_RCC_GetPCLK1Freq
+ 80008ac  80008ac        0     1                 $d
+ 80008b8  80008b8       20     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj:(.text.HAL_RCC_GetPCLK2Freq)
+ 80008b8  80008b8        0     1                 $t
+ 80008b9  80008b9       20     1                 HAL_RCC_GetPCLK2Freq
+ 80008cc  80008cc        0     1                 $d
+ 80008d8  80008d8        a     2         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj:(.text.OUTLINED_FUNCTION_0)
+ 80008d8  80008d8        0     1                 $t
+ 80008d9  80008d9        a     1                 OUTLINED_FUNCTION_0
+ 80008e4  80008e4       68     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj:(.text.HAL_RCC_GetSysClockFreq)
+ 80008e4  80008e4        0     1                 $t
+ 80008e5  80008e5       68     1                 HAL_RCC_GetSysClockFreq
+ 80008f4  80008f4        0     1                 $d
+ 80008f8  80008f8        0     1                 $t
+ 8000940  8000940        0     1                 $d
+ 800094c  800094c      344     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj:(.text.HAL_RCC_OscConfig)
+ 800094c  800094c        0     1                 $t
+ 800094d  800094d      344     1                 HAL_RCC_OscConfig
+ 8000c84  8000c84        0     1                 $d
+ 8000c90  8000c90        6     2         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj:(.text.OUTLINED_FUNCTION_1)
+ 8000c90  8000c90        0     1                 $t
+ 8000c91  8000c91        6     1                 OUTLINED_FUNCTION_1
+ 8000c96  8000c96       12     2         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj:(.text.OUTLINED_FUNCTION_2)
+ 8000c96  8000c96        0     1                 $t
+ 8000c97  8000c97       12     1                 OUTLINED_FUNCTION_2
+ 8000ca8  8000ca8        8     2         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj:(.text.OUTLINED_FUNCTION_3)
+ 8000ca8  8000ca8        0     1                 $t
+ 8000ca9  8000ca9        8     1                 OUTLINED_FUNCTION_3
+ 8000cb0  8000cb0       10     2         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj:(.text.OUTLINED_FUNCTION_4)
+ 8000cb0  8000cb0        0     1                 $t
+ 8000cb1  8000cb1       10     1                 OUTLINED_FUNCTION_4
+ 8000cc0  8000cc0        a     2         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj:(.text.OUTLINED_FUNCTION_5)
+ 8000cc0  8000cc0        0     1                 $t
+ 8000cc1  8000cc1        a     1                 OUTLINED_FUNCTION_5
+ 8000cca  8000cca        a     2         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj:(.text.OUTLINED_FUNCTION_6)
+ 8000cca  8000cca        0     1                 $t
+ 8000ccb  8000ccb        a     1                 OUTLINED_FUNCTION_6
+ 8000cd4  8000cd4      198     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj:(.text.HAL_GPIO_Init)
+ 8000cd4  8000cd4        0     1                 $t
+ 8000cd5  8000cd5      198     1                 HAL_GPIO_Init
+ 8000e54  8000e54        0     1                 $d
+ 8000e6c  8000e6c        a     2         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj:(.text.HAL_GPIO_WritePin)
+ 8000e6c  8000e6c        0     1                 $t
+ 8000e6d  8000e6d        a     1                 HAL_GPIO_WritePin
+ 8000e76  8000e76       10     2         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj:(.text.HAL_GPIO_TogglePin)
+ 8000e76  8000e76        0     1                 $t
+ 8000e77  8000e77       10     1                 HAL_GPIO_TogglePin
+ 8000e88  8000e88       14     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj:(.text.HAL_GPIO_EXTI_IRQHandler)
+ 8000e88  8000e88        0     1                 $t
+ 8000e89  8000e89       14     1                 HAL_GPIO_EXTI_IRQHandler
+ 8000e98  8000e98        0     1                 $d
+ 8000e9c  8000e9c       7a     2         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj:(.text.HAL_DMA_Abort)
+ 8000e9c  8000e9c        0     1                 $t
+ 8000e9d  8000e9d       7a     1                 HAL_DMA_Abort
+ 8000f16  8000f16       24     2         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj:(.text.HAL_DMA_Abort_IT)
+ 8000f16  8000f16        0     1                 $t
+ 8000f17  8000f17       24     1                 HAL_DMA_Abort_IT
+ 8000f3a  8000f3a        a     2         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj:(.text.OUTLINED_FUNCTION_3)
+ 8000f3a  8000f3a        0     1                 $t
+ 8000f3b  8000f3b        a     1                 OUTLINED_FUNCTION_3
+ 8000f44  8000f44       20     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj:(.text.HAL_NVIC_SetPriorityGrouping)
+ 8000f44  8000f44        0     1                 $t
+ 8000f45  8000f45       20     1                 HAL_NVIC_SetPriorityGrouping
+ 8000f5c  8000f5c        0     1                 $d
+ 8000f64  8000f64       4c     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj:(.text.HAL_NVIC_SetPriority)
+ 8000f64  8000f64        0     1                 $t
+ 8000f65  8000f65       4c     1                 HAL_NVIC_SetPriority
+ 8000fa8  8000fa8        0     1                 $d
+ 8000fb0  8000fb0       20     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj:(.text.HAL_NVIC_EnableIRQ)
  8000fb0  8000fb0        0     1                 $t
- 8000fb1  8000fb1       14     1                 HAL_GPIO_EXTI_IRQHandler
- 8000fc0  8000fc0        0     1                 $d
- 8000fc4  8000fc4       7a     2         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj:(.text.HAL_DMA_Abort)
- 8000fc4  8000fc4        0     1                 $t
- 8000fc5  8000fc5       7a     1                 HAL_DMA_Abort
- 800103e  800103e       24     2         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj:(.text.HAL_DMA_Abort_IT)
- 800103e  800103e        0     1                 $t
- 800103f  800103f       24     1                 HAL_DMA_Abort_IT
- 8001062  8001062        a     2         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj:(.text.OUTLINED_FUNCTION_3)
- 8001062  8001062        0     1                 $t
- 8001063  8001063        a     1                 OUTLINED_FUNCTION_3
- 800106c  800106c       20     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj:(.text.HAL_NVIC_SetPriorityGrouping)
+ 8000fb1  8000fb1       20     1                 HAL_NVIC_EnableIRQ
+ 8000fcc  8000fcc        0     1                 $d
+ 8000fd0  8000fd0       28     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj:(.text.HAL_SYSTICK_Config)
+ 8000fd0  8000fd0        0     1                 $t
+ 8000fd1  8000fd1       28     1                 HAL_SYSTICK_Config
+ 8000ff0  8000ff0        0     1                 $d
+ 8000ff8  8000ff8       34     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj:(.text.HAL_Init)
+ 8000ff8  8000ff8        0     1                 $t
+ 8000ff9  8000ff9       34     1                 HAL_Init
+ 8001028  8001028        0     1                 $d
+ 800102c  800102c       40     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj:(.text.HAL_InitTick)
+ 800102c  800102c        0     1                 $t
+ 800102d  800102d       40     1                 HAL_InitTick
+ 8001064  8001064        0     1                 $d
+ 800106c  800106c       18     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj:(.text.HAL_IncTick)
  800106c  800106c        0     1                 $t
- 800106d  800106d       20     1                 HAL_NVIC_SetPriorityGrouping
- 8001084  8001084        0     1                 $d
- 800108c  800108c       4c     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj:(.text.HAL_NVIC_SetPriority)
- 800108c  800108c        0     1                 $t
- 800108d  800108d       4c     1                 HAL_NVIC_SetPriority
- 80010d0  80010d0        0     1                 $d
- 80010d8  80010d8       20     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj:(.text.HAL_NVIC_EnableIRQ)
- 80010d8  80010d8        0     1                 $t
- 80010d9  80010d9       20     1                 HAL_NVIC_EnableIRQ
- 80010f4  80010f4        0     1                 $d
- 80010f8  80010f8       28     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj:(.text.HAL_SYSTICK_Config)
- 80010f8  80010f8        0     1                 $t
- 80010f9  80010f9       28     1                 HAL_SYSTICK_Config
- 8001118  8001118        0     1                 $d
- 8001120  8001120       34     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj:(.text.HAL_Init)
- 8001120  8001120        0     1                 $t
- 8001121  8001121       34     1                 HAL_Init
- 8001150  8001150        0     1                 $d
- 8001154  8001154       40     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj:(.text.HAL_InitTick)
- 8001154  8001154        0     1                 $t
- 8001155  8001155       40     1                 HAL_InitTick
- 800118c  800118c        0     1                 $d
- 8001194  8001194       18     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj:(.text.HAL_IncTick)
- 8001194  8001194        0     1                 $t
- 8001195  8001195       18     1                 HAL_IncTick
- 80011a4  80011a4        0     1                 $d
- 80011ac  80011ac        c     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj:(.text.HAL_GetTick)
- 80011ac  80011ac        0     1                 $t
- 80011ad  80011ad        c     1                 HAL_GetTick
- 80011b4  80011b4        0     1                 $d
- 80011b8  80011b8       36     2         CMakeFiles/TestNUCLEO.dir/Core/Src/main.c.obj:(.text.compute_crc16)
- 80011b8  80011b8        0     1                 $t
- 80011b9  80011b9       36     1                 compute_crc16
- 80011ee  80011ee       1e     2         CMakeFiles/TestNUCLEO.dir/Core/Src/main.c.obj:(.text.xor_cipher)
- 80011ee  80011ee        0     1                 $t
- 80011ef  80011ef       1e     1                 xor_cipher
- 800120c  800120c      164     4         CMakeFiles/TestNUCLEO.dir/Core/Src/main.c.obj:(.text.main)
- 800120c  800120c        0     1                 $t
- 800120d  800120d      164     1                 main
- 8001360  8001360        0     1                 $d
- 8001370  8001370       9c     4         CMakeFiles/TestNUCLEO.dir/Core/Src/main.c.obj:(.text.SystemClock_Config)
- 8001370  8001370        0     1                 $t
- 8001371  8001371       9c     1                 SystemClock_Config
- 8001404  8001404        0     1                 $d
- 800140c  800140c       28     4         CMakeFiles/TestNUCLEO.dir/Core/Src/main.c.obj:(.text.HAL_GPIO_EXTI_Callback)
- 800140c  800140c        0     1                 $t
- 800140d  800140d       28     1                 HAL_GPIO_EXTI_Callback
- 8001430  8001430        0     1                 $d
- 8001434  8001434       f8     4         CMakeFiles/TestNUCLEO.dir/Core/Src/main.c.obj:(.text.process_received_frame)
- 8001434  8001434        0     1                 $t
- 8001435  8001435       f8     1                 process_received_frame
- 8001520  8001520        0     1                 $d
- 800152c  800152c       70     4         CMakeFiles/TestNUCLEO.dir/Core/Src/main.c.obj:(.text.HAL_UART_RxCpltCallback)
- 800152c  800152c        0     1                 $t
- 800152d  800152d       70     1                 HAL_UART_RxCpltCallback
- 8001594  8001594        0     1                 $d
- 800159c  800159c        e     2         CMakeFiles/TestNUCLEO.dir/Core/Src/main.c.obj:(.text.OUTLINED_FUNCTION_0)
- 800159c  800159c        0     1                 $t
- 800159d  800159d        e     1                 OUTLINED_FUNCTION_0
- 80015aa  80015aa        c     2         CMakeFiles/TestNUCLEO.dir/Core/Src/main.c.obj:(.text.OUTLINED_FUNCTION_1)
- 80015aa  80015aa        0     1                 $t
- 80015ab  80015ab        c     1                 OUTLINED_FUNCTION_1
- 80015b6  80015b6        a     2         CMakeFiles/TestNUCLEO.dir/Core/Src/main.c.obj:(.text.OUTLINED_FUNCTION_2)
- 80015b6  80015b6        0     1                 $t
- 80015b7  80015b7        a     1                 OUTLINED_FUNCTION_2
- 80015c0  80015c0        2     2         CMakeFiles/TestNUCLEO.dir/Core/Src/stm32f4xx_it.c.obj:(.text.NMI_Handler)
- 80015c0  80015c0        0     1                 $t
- 80015c1  80015c1        2     1                 NMI_Handler
- 80015c2  80015c2        2     2         CMakeFiles/TestNUCLEO.dir/Core/Src/stm32f4xx_it.c.obj:(.text.HardFault_Handler)
- 80015c2  80015c2        0     1                 $t
- 80015c3  80015c3        2     1                 HardFault_Handler
- 80015c4  80015c4        2     2         CMakeFiles/TestNUCLEO.dir/Core/Src/stm32f4xx_it.c.obj:(.text.MemManage_Handler)
- 80015c4  80015c4        0     1                 $t
- 80015c5  80015c5        2     1                 MemManage_Handler
- 80015c6  80015c6        2     2         CMakeFiles/TestNUCLEO.dir/Core/Src/stm32f4xx_it.c.obj:(.text.BusFault_Handler)
- 80015c6  80015c6        0     1                 $t
- 80015c7  80015c7        2     1                 BusFault_Handler
- 80015c8  80015c8        2     2         CMakeFiles/TestNUCLEO.dir/Core/Src/stm32f4xx_it.c.obj:(.text.UsageFault_Handler)
- 80015c8  80015c8        0     1                 $t
- 80015c9  80015c9        2     1                 UsageFault_Handler
- 80015ca  80015ca        2     2         CMakeFiles/TestNUCLEO.dir/Core/Src/stm32f4xx_it.c.obj:(.text.SVC_Handler)
- 80015ca  80015ca        0     1                 $t
- 80015cb  80015cb        2     1                 SVC_Handler
- 80015cc  80015cc        2     2         CMakeFiles/TestNUCLEO.dir/Core/Src/stm32f4xx_it.c.obj:(.text.DebugMon_Handler)
- 80015cc  80015cc        0     1                 $t
- 80015cd  80015cd        2     1                 DebugMon_Handler
- 80015ce  80015ce        2     2         CMakeFiles/TestNUCLEO.dir/Core/Src/stm32f4xx_it.c.obj:(.text.PendSV_Handler)
- 80015ce  80015ce        0     1                 $t
- 80015cf  80015cf        2     1                 PendSV_Handler
- 80015d0  80015d0        4     2         CMakeFiles/TestNUCLEO.dir/Core/Src/stm32f4xx_it.c.obj:(.text.SysTick_Handler)
- 80015d0  80015d0        0     1                 $t
- 80015d1  80015d1        4     1                 SysTick_Handler
- 80015d4  80015d4        c     4         CMakeFiles/TestNUCLEO.dir/Core/Src/stm32f4xx_it.c.obj:(.text.USART1_IRQHandler)
- 80015d4  80015d4        0     1                 $t
- 80015d5  80015d5        c     1                 USART1_IRQHandler
- 80015dc  80015dc        0     1                 $d
- 80015e0  80015e0        c     4         CMakeFiles/TestNUCLEO.dir/Core/Src/stm32f4xx_it.c.obj:(.text.USART2_IRQHandler)
- 80015e0  80015e0        0     1                 $t
- 80015e1  80015e1        c     1                 USART2_IRQHandler
- 80015e8  80015e8        0     1                 $d
- 80015ec  80015ec        8     2         CMakeFiles/TestNUCLEO.dir/Core/Src/stm32f4xx_it.c.obj:(.text.EXTI15_10_IRQHandler)
- 80015ec  80015ec        0     1                 $t
- 80015ed  80015ed        8     1                 EXTI15_10_IRQHandler
- 80015f4  80015f4       3c     4         CMakeFiles/TestNUCLEO.dir/Core/Src/stm32f4xx_hal_msp.c.obj:(.text.HAL_MspInit)
- 80015f4  80015f4        0     1                 $t
- 80015f5  80015f5       3c     1                 HAL_MspInit
- 800162c  800162c        0     1                 $d
- 8001630  8001630       98     4         CMakeFiles/TestNUCLEO.dir/Core/Src/stm32f4xx_hal_msp.c.obj:(.text.HAL_UART_MspInit)
- 8001630  8001630        0     1                 $t
- 8001631  8001631       98     1                 HAL_UART_MspInit
- 80016b8  80016b8        0     1                 $d
- 80016c8  80016c8       1a     2         CMakeFiles/TestNUCLEO.dir/Core/Src/stm32f4xx_hal_msp.c.obj:(.text.OUTLINED_FUNCTION_0)
- 80016c8  80016c8        0     1                 $t
- 80016c9  80016c9       1a     1                 OUTLINED_FUNCTION_0
- 80016e4  80016e4       50     4         CMakeFiles/TestNUCLEO.dir/startup_stm32f446xx.s.obj:(.text.Reset_Handler)
- 80016e4  80016e4        0     1                 $t
- 80016e5  80016e5       38     1                 Reset_Handler
- 80016f6  80016f6        0     1                 CopyDataInit
- 80016fc  80016fc        0     1                 LoopCopyDataInit
- 800170a  800170a        0     1                 FillZerobss
- 800170e  800170e        0     1                 LoopFillZerobss
- 800171c  800171c        0     1                 $d
- 8001734  8001734        2     1         CMakeFiles/TestNUCLEO.dir/startup_stm32f446xx.s.obj:(.text.Default_Handler)
- 8001734  8001734        0     1                 Infinite_Loop
- 8001734  8001734        0     1                 $t
- 8001734  8001734        2     1                 Default_Handler
- 8001735  8001735        2     1                 WWDG_IRQHandler
- 8001735  8001735        2     1                 PVD_IRQHandler
- 8001735  8001735        2     1                 TAMP_STAMP_IRQHandler
- 8001735  8001735        2     1                 RTC_WKUP_IRQHandler
- 8001735  8001735        2     1                 FLASH_IRQHandler
- 8001735  8001735        2     1                 RCC_IRQHandler
- 8001735  8001735        2     1                 EXTI0_IRQHandler
- 8001735  8001735        2     1                 EXTI1_IRQHandler
- 8001735  8001735        2     1                 EXTI2_IRQHandler
- 8001735  8001735        2     1                 EXTI3_IRQHandler
- 8001735  8001735        2     1                 EXTI4_IRQHandler
- 8001735  8001735        2     1                 DMA1_Stream0_IRQHandler
- 8001735  8001735        2     1                 DMA1_Stream1_IRQHandler
- 8001735  8001735        2     1                 DMA1_Stream2_IRQHandler
- 8001735  8001735        2     1                 DMA1_Stream3_IRQHandler
- 8001735  8001735        2     1                 DMA1_Stream4_IRQHandler
- 8001735  8001735        2     1                 DMA1_Stream5_IRQHandler
- 8001735  8001735        2     1                 DMA1_Stream6_IRQHandler
- 8001735  8001735        2     1                 ADC_IRQHandler
- 8001735  8001735        2     1                 CAN1_TX_IRQHandler
- 8001735  8001735        2     1                 CAN1_RX0_IRQHandler
- 8001735  8001735        2     1                 CAN1_RX1_IRQHandler
- 8001735  8001735        2     1                 CAN1_SCE_IRQHandler
- 8001735  8001735        2     1                 EXTI9_5_IRQHandler
- 8001735  8001735        2     1                 TIM1_BRK_TIM9_IRQHandler
- 8001735  8001735        2     1                 TIM1_UP_TIM10_IRQHandler
- 8001735  8001735        2     1                 TIM1_TRG_COM_TIM11_IRQHandler
- 8001735  8001735        2     1                 TIM1_CC_IRQHandler
- 8001735  8001735        2     1                 TIM2_IRQHandler
- 8001735  8001735        2     1                 TIM3_IRQHandler
- 8001735  8001735        2     1                 TIM4_IRQHandler
- 8001735  8001735        2     1                 I2C1_EV_IRQHandler
- 8001735  8001735        2     1                 I2C1_ER_IRQHandler
- 8001735  8001735        2     1                 I2C2_EV_IRQHandler
- 8001735  8001735        2     1                 I2C2_ER_IRQHandler
- 8001735  8001735        2     1                 SPI1_IRQHandler
- 8001735  8001735        2     1                 SPI2_IRQHandler
- 8001735  8001735        2     1                 USART3_IRQHandler
- 8001735  8001735        2     1                 RTC_Alarm_IRQHandler
- 8001735  8001735        2     1                 OTG_FS_WKUP_IRQHandler
- 8001735  8001735        2     1                 TIM8_BRK_TIM12_IRQHandler
- 8001735  8001735        2     1                 TIM8_UP_TIM13_IRQHandler
- 8001735  8001735        2     1                 TIM8_TRG_COM_TIM14_IRQHandler
- 8001735  8001735        2     1                 TIM8_CC_IRQHandler
- 8001735  8001735        2     1                 DMA1_Stream7_IRQHandler
- 8001735  8001735        2     1                 FMC_IRQHandler
- 8001735  8001735        2     1                 SDIO_IRQHandler
- 8001735  8001735        2     1                 TIM5_IRQHandler
- 8001735  8001735        2     1                 SPI3_IRQHandler
- 8001735  8001735        2     1                 UART4_IRQHandler
- 8001735  8001735        2     1                 UART5_IRQHandler
- 8001735  8001735        2     1                 TIM6_DAC_IRQHandler
- 8001735  8001735        2     1                 TIM7_IRQHandler
- 8001735  8001735        2     1                 DMA2_Stream0_IRQHandler
- 8001735  8001735        2     1                 DMA2_Stream1_IRQHandler
- 8001735  8001735        2     1                 DMA2_Stream2_IRQHandler
- 8001735  8001735        2     1                 DMA2_Stream3_IRQHandler
- 8001735  8001735        2     1                 DMA2_Stream4_IRQHandler
- 8001735  8001735        2     1                 CAN2_TX_IRQHandler
- 8001735  8001735        2     1                 CAN2_RX0_IRQHandler
- 8001735  8001735        2     1                 CAN2_RX1_IRQHandler
- 8001735  8001735        2     1                 CAN2_SCE_IRQHandler
- 8001735  8001735        2     1                 OTG_FS_IRQHandler
- 8001735  8001735        2     1                 DMA2_Stream5_IRQHandler
- 8001735  8001735        2     1                 DMA2_Stream6_IRQHandler
- 8001735  8001735        2     1                 DMA2_Stream7_IRQHandler
- 8001735  8001735        2     1                 USART6_IRQHandler
- 8001735  8001735        2     1                 I2C3_EV_IRQHandler
- 8001735  8001735        2     1                 I2C3_ER_IRQHandler
- 8001735  8001735        2     1                 OTG_HS_EP1_OUT_IRQHandler
- 8001735  8001735        2     1                 OTG_HS_EP1_IN_IRQHandler
- 8001735  8001735        2     1                 OTG_HS_WKUP_IRQHandler
- 8001735  8001735        2     1                 OTG_HS_IRQHandler
- 8001735  8001735        2     1                 DCMI_IRQHandler
- 8001735  8001735        2     1                 FPU_IRQHandler
- 8001735  8001735        2     1                 SPI4_IRQHandler
- 8001735  8001735        2     1                 SAI1_IRQHandler
- 8001735  8001735        2     1                 SAI2_IRQHandler
- 8001735  8001735        2     1                 QUADSPI_IRQHandler
- 8001735  8001735        2     1                 CEC_IRQHandler
- 8001735  8001735        2     1                 SPDIF_RX_IRQHandler
- 8001735  8001735        2     1                 FMPI2C1_EV_IRQHandler
- 8001735  8001735        2     1                 FMPI2C1_ER_IRQHandler
- 8001738  8001738      1be     4         /Users/matiasvinkovic/Library/Application Support/stm32cube/bundles/st-arm-clang/21.1.1+st.7/bin/../lib/clang-runtimes/arm-none-eabi/armv7m_hard_fpv4_sp_d16_exn_rtti_unaligned_size/lib/libclang_rt.builtins.a(udivmoddi4.c.obj):(.text.__udivmoddi4)
- 8001738  8001738        0     1                 $t
- 8001739  8001739      1be     1                 __udivmoddi4
- 80018f6  80018f6        8     2         /Users/matiasvinkovic/Library/Application Support/stm32cube/bundles/st-arm-clang/21.1.1+st.7/bin/../lib/clang-runtimes/arm-none-eabi/armv7m_hard_fpv4_sp_d16_exn_rtti_unaligned_size/lib/libc.a(bzero.c.o):(.text.bzero)
- 80018f6  80018f6        0     1                 $t
- 80018f7  80018f7        8     1                 bzero
- 80018f7  80018f7        8     1                 __aeabi_memclr4
- 80018f7  80018f7        8     1                 __aeabi_memclr8
- 80018f7  80018f7        8     1                 __aeabi_memclr
- 80018fe  80018fe        e     2         /Users/matiasvinkovic/Library/Application Support/stm32cube/bundles/st-arm-clang/21.1.1+st.7/bin/../lib/clang-runtimes/arm-none-eabi/armv7m_hard_fpv4_sp_d16_exn_rtti_unaligned_size/lib/libc.a(memset.c.o):(.text.memset)
- 80018fe  80018fe        0     1                 $t
- 80018ff  80018ff        e     1                 memset
- 800190c  800190c       30     4         /Users/matiasvinkovic/Library/Application Support/stm32cube/bundles/st-arm-clang/21.1.1+st.7/bin/../lib/clang-runtimes/arm-none-eabi/armv7m_hard_fpv4_sp_d16_exn_rtti_unaligned_size/lib/libc.a(libc_misc_init.c.o):(.text.__libc_init_array)
- 800190c  800190c        0     1                 $t
- 800190d  800190d       30     1                 __libc_init_array
- 800192c  800192c        0     1                 $d
- 800193c  800193c       10     4         /Users/matiasvinkovic/Library/Application Support/stm32cube/bundles/st-arm-clang/21.1.1+st.7/bin/../lib/clang-runtimes/arm-none-eabi/armv7m_hard_fpv4_sp_d16_exn_rtti_unaligned_size/lib/libc.a(libc_picolib_machine_arm_read_tp.S.o):(.text._initial_set_tls)
- 800193c  800193c        0     1                 $t
- 800193d  800193d        6     1                 _initial_set_tls
- 8001944  8001944        0     1                 $d
- 800194c  800194c       14     4         /Users/matiasvinkovic/Library/Application Support/stm32cube/bundles/st-arm-clang/21.1.1+st.7/bin/../lib/clang-runtimes/arm-none-eabi/armv7m_hard_fpv4_sp_d16_exn_rtti_unaligned_size/lib/libc.a(libc_picolib_machine_arm_set_tls.c.o):(.text._set_tls)
- 800194c  800194c        0     1                 $t
- 800194d  800194d       14     1                 _set_tls
- 8001958  8001958        0     1                 $d
- 8001960  8001960        0     1         . = ALIGN(4)
- 8001960  8001960        0     1         _etext = .
- 8001960  8001960       18     1 .rodata
- 8001960  8001960        0     1         . = ALIGN(4)
- 8001960  8001960       10     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.obj:(.rodata.AHBPrescTable)
- 8001960  8001960       10     1                 AHBPrescTable
- 8001970  8001970        8     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.obj:(.rodata.APBPrescTable)
- 8001970  8001970        8     1                 APBPrescTable
- 8001978  8001978        0     1         . = ALIGN(4)
- 8001978  8001978        0     1 .ARM.extab
- 8001978  8001978        0     1         . = ALIGN(4)
- 8001978  8001978        0     1         . = ALIGN(4)
- 8001978  8001978       10     4 .ARM
- 8001978  8001978        0     1         . = ALIGN(4)
- 8001978  8001978        0     1         __exidx_start = .
- 8001978  8001978       10     4         <internal>:(.ARM.exidx)
- 8001988  8001988        0     1         __exidx_end = .
- 8001988  8001988        0     1         . = ALIGN(4)
- 8001988  8001988        4     4 .preinit_array
- 8001988  8001988        0     1         . = ALIGN(4)
- 8001988  8001988        0     1         PROVIDE_HIDDEN (__preinit_array_start = .)
- 8001988  8001988        4     4         /Users/matiasvinkovic/Library/Application Support/stm32cube/bundles/st-arm-clang/21.1.1+st.7/bin/../lib/clang-runtimes/arm-none-eabi/armv7m_hard_fpv4_sp_d16_exn_rtti_unaligned_size/lib/libc.a(libc_picolib_machine_arm_read_tp.S.o):(.preinit_array)
- 800198c  800198c        0     1         PROVIDE_HIDDEN (__preinit_array_end = .)
- 800198c  800198c        0     1         . = ALIGN(4)
- 800198c  800198c        0     1 .init_array
- 800198c  800198c        0     1         . = ALIGN(4)
- 800198c  800198c        0     1         PROVIDE_HIDDEN (__init_array_start = .)
- 800198c  800198c        0     1         PROVIDE_HIDDEN (__init_array_end = .)
- 800198c  800198c        0     1         . = ALIGN(4)
- 800198c  800198c        0     1 .fini_array
- 800198c  800198c        0     1         . = ALIGN(4)
- 800198c  800198c        0     1         . = ALIGN(4)
- 800198c  800198c        0     1 _sidata = LOADADDR(.data)
-20000000  800198c       10     4 .data
-20000000  800198c        0     1         . = ALIGN(4)
-20000000  800198c        0     1         _sdata = .
-20000000  800198c        4     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.obj:(.data.SystemCoreClock)
-20000000  800198c        4     1                 SystemCoreClock
-20000004  8001990        8     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj:(.data..L_MergedGlobals)
-20000004  8001990        1     1                 uwTickFreq
-20000008  8001994        4     1                 uwTickPrio
-2000000c  8001998        4     4         CMakeFiles/TestNUCLEO.dir/Core/Src/main.c.obj:(.data.my_id)
-2000000c  8001998        4     1                 my_id
-20000010  800199c        0     1         . = ALIGN(4)
-20000010  800199c        0     4 .tdata
-20000010  800199c        0     1         . = ALIGN(4)
-20000010  800199c        0     1         _edata = .
-20000010  800199c        0     1 PROVIDE( __tdata_start = ADDR(.tdata) )
-20000010 20000010        0     4 .tbss
-20000010 20000010        0     1         _sbss = .
-20000010 20000010        0     1         __bss_start__ = _sbss
-20000010 20000010        0     1         . = ALIGN(4)
-20000010 20000010        0     1 PROVIDE( __tls_base = __tdata_start )
-20000010 20000010        0     1 PROVIDE( __tls_align = MAX(ALIGNOF(.tdata), ALIGNOF(.tbss)) )
-20000010 20000010        0     1 PROVIDE( __arm32_tls_tcb_offset = MAX(8, __tls_align) )
-20000010 20000010       c4     4 .bss
-20000010 20000010        4     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj:(.bss.uwTick)
-20000010 20000010        4     1                 uwTick
-20000014 20000014       48     4         CMakeFiles/TestNUCLEO.dir/Core/Src/main.c.obj:(.bss.huart1)
-20000014 20000014       48     1                 huart1
-2000005c 2000005c       74     4         CMakeFiles/TestNUCLEO.dir/Core/Src/main.c.obj:(.bss..L_MergedGlobals)
-2000005c 2000005c        1     1                 current_role
-2000005d 2000005d        1     1                 current_led_mode
-2000005e 2000005e        1     1                 button_press_count
-2000005f 2000005f        1     1                 rx2_byte
-20000060 20000060        1     1                 rx1_byte
-20000061 20000061        1     1                 receiving_frame
-20000062 20000062        1     1                 rx_index
-20000064 20000064        4     1                 current_key
-20000068 20000068        4     1                 last_button_time
-2000006c 2000006c       1a     1                 rx_buffer
-20000088 20000088       48     1                 huart2
-200000d0 200000d0        4     4         /Users/matiasvinkovic/Library/Application Support/stm32cube/bundles/st-arm-clang/21.1.1+st.7/bin/../lib/clang-runtimes/arm-none-eabi/armv7m_hard_fpv4_sp_d16_exn_rtti_unaligned_size/lib/libc.a(libc_picolib_machine_arm_tls.c.o):(.bss.__tls)
-200000d0 200000d0        4     1                 __tls
-200000d4 200000d4        0     1         . = ALIGN(4)
-200000d4 200000d4        0     1         _ebss = .
-200000d4 200000d4        0     1         __bss_end__ = _ebss
-200000d4 200000d4      604     1 ._user_heap_stack
-200000d4 200000d4        4     1         . = ALIGN(8)
-200000d8 200000d8        0     1         PROVIDE ( _end = . )
-200000d8 200000d8      200     1         . = . + _Min_Heap_Size
-200002d8 200002d8      400     1         . = . + _Min_Stack_Size
-200006d8 200006d8        0     1         . = ALIGN(8)
+ 800106d  800106d       18     1                 HAL_IncTick
+ 800107c  800107c        0     1                 $d
+ 8001084  8001084        c     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj:(.text.HAL_GetTick)
+ 8001084  8001084        0     1                 $t
+ 8001085  8001085        c     1                 HAL_GetTick
+ 800108c  800108c        0     1                 $d
+ 8001090  8001090       36     2         CMakeFiles/TestNUCLEO.dir/Core/Src/main.c.obj:(.text.compute_crc16)
+ 8001090  8001090        0     1                 $t
+ 8001091  8001091       36     1                 compute_crc16
+ 80010c8  80010c8      164     4         CMakeFiles/TestNUCLEO.dir/Core/Src/main.c.obj:(.text.main)
+ 80010c8  80010c8        0     1                 $t
+ 80010c9  80010c9      164     1                 main
+ 800121c  800121c        0     1                 $d
+ 800122c  800122c       9c     4         CMakeFiles/TestNUCLEO.dir/Core/Src/main.c.obj:(.text.SystemClock_Config)
+ 800122c  800122c        0     1                 $t
+ 800122d  800122d       9c     1                 SystemClock_Config
+ 80012c0  80012c0        0     1                 $d
+ 80012c8  80012c8       28     4         CMakeFiles/TestNUCLEO.dir/Core/Src/main.c.obj:(.text.HAL_GPIO_EXTI_Callback)
+ 80012c8  80012c8        0     1                 $t
+ 80012c9  80012c9       28     1                 HAL_GPIO_EXTI_Callback
+ 80012ec  80012ec        0     1                 $d
+ 80012f0  80012f0       54     4         CMakeFiles/TestNUCLEO.dir/Core/Src/main.c.obj:(.text.process_received_frame)
+ 80012f0  80012f0        0     1                 $t
+ 80012f1  80012f1       54     1                 process_received_frame
+ 800133c  800133c        0     1                 $d
+ 8001344  8001344       70     4         CMakeFiles/TestNUCLEO.dir/Core/Src/main.c.obj:(.text.HAL_UART_RxCpltCallback)
+ 8001344  8001344        0     1                 $t
+ 8001345  8001345       70     1                 HAL_UART_RxCpltCallback
+ 80013ac  80013ac        0     1                 $d
+ 80013b4  80013b4        e     2         CMakeFiles/TestNUCLEO.dir/Core/Src/main.c.obj:(.text.OUTLINED_FUNCTION_0)
+ 80013b4  80013b4        0     1                 $t
+ 80013b5  80013b5        e     1                 OUTLINED_FUNCTION_0
+ 80013c2  80013c2        a     2         CMakeFiles/TestNUCLEO.dir/Core/Src/main.c.obj:(.text.OUTLINED_FUNCTION_1)
+ 80013c2  80013c2        0     1                 $t
+ 80013c3  80013c3        a     1                 OUTLINED_FUNCTION_1
+ 80013cc  80013cc        2     2         CMakeFiles/TestNUCLEO.dir/Core/Src/stm32f4xx_it.c.obj:(.text.NMI_Handler)
+ 80013cc  80013cc        0     1                 $t
+ 80013cd  80013cd        2     1                 NMI_Handler
+ 80013ce  80013ce        2     2         CMakeFiles/TestNUCLEO.dir/Core/Src/stm32f4xx_it.c.obj:(.text.HardFault_Handler)
+ 80013ce  80013ce        0     1                 $t
+ 80013cf  80013cf        2     1                 HardFault_Handler
+ 80013d0  80013d0        2     2         CMakeFiles/TestNUCLEO.dir/Core/Src/stm32f4xx_it.c.obj:(.text.MemManage_Handler)
+ 80013d0  80013d0        0     1                 $t
+ 80013d1  80013d1        2     1                 MemManage_Handler
+ 80013d2  80013d2        2     2         CMakeFiles/TestNUCLEO.dir/Core/Src/stm32f4xx_it.c.obj:(.text.BusFault_Handler)
+ 80013d2  80013d2        0     1                 $t
+ 80013d3  80013d3        2     1                 BusFault_Handler
+ 80013d4  80013d4        2     2         CMakeFiles/TestNUCLEO.dir/Core/Src/stm32f4xx_it.c.obj:(.text.UsageFault_Handler)
+ 80013d4  80013d4        0     1                 $t
+ 80013d5  80013d5        2     1                 UsageFault_Handler
+ 80013d6  80013d6        2     2         CMakeFiles/TestNUCLEO.dir/Core/Src/stm32f4xx_it.c.obj:(.text.SVC_Handler)
+ 80013d6  80013d6        0     1                 $t
+ 80013d7  80013d7        2     1                 SVC_Handler
+ 80013d8  80013d8        2     2         CMakeFiles/TestNUCLEO.dir/Core/Src/stm32f4xx_it.c.obj:(.text.DebugMon_Handler)
+ 80013d8  80013d8        0     1                 $t
+ 80013d9  80013d9        2     1                 DebugMon_Handler
+ 80013da  80013da        2     2         CMakeFiles/TestNUCLEO.dir/Core/Src/stm32f4xx_it.c.obj:(.text.PendSV_Handler)
+ 80013da  80013da        0     1                 $t
+ 80013db  80013db        2     1                 PendSV_Handler
+ 80013dc  80013dc        4     2         CMakeFiles/TestNUCLEO.dir/Core/Src/stm32f4xx_it.c.obj:(.text.SysTick_Handler)
+ 80013dc  80013dc        0     1                 $t
+ 80013dd  80013dd        4     1                 SysTick_Handler
+ 80013e0  80013e0        c     4         CMakeFiles/TestNUCLEO.dir/Core/Src/stm32f4xx_it.c.obj:(.text.USART1_IRQHandler)
+ 80013e0  80013e0        0     1                 $t
+ 80013e1  80013e1        c     1                 USART1_IRQHandler
+ 80013e8  80013e8        0     1                 $d
+ 80013ec  80013ec        c     4         CMakeFiles/TestNUCLEO.dir/Core/Src/stm32f4xx_it.c.obj:(.text.USART2_IRQHandler)
+ 80013ec  80013ec        0     1                 $t
+ 80013ed  80013ed        c     1                 USART2_IRQHandler
+ 80013f4  80013f4        0     1                 $d
+ 80013f8  80013f8        8     2         CMakeFiles/TestNUCLEO.dir/Core/Src/stm32f4xx_it.c.obj:(.text.EXTI15_10_IRQHandler)
+ 80013f8  80013f8        0     1                 $t
+ 80013f9  80013f9        8     1                 EXTI15_10_IRQHandler
+ 8001400  8001400       3c     4         CMakeFiles/TestNUCLEO.dir/Core/Src/stm32f4xx_hal_msp.c.obj:(.text.HAL_MspInit)
+ 8001400  8001400        0     1                 $t
+ 8001401  8001401       3c     1                 HAL_MspInit
+ 8001438  8001438        0     1                 $d
+ 800143c  800143c       98     4         CMakeFiles/TestNUCLEO.dir/Core/Src/stm32f4xx_hal_msp.c.obj:(.text.HAL_UART_MspInit)
+ 800143c  800143c        0     1                 $t
+ 800143d  800143d       98     1                 HAL_UART_MspInit
+ 80014c4  80014c4        0     1                 $d
+ 80014d4  80014d4       1a     2         CMakeFiles/TestNUCLEO.dir/Core/Src/stm32f4xx_hal_msp.c.obj:(.text.OUTLINED_FUNCTION_0)
+ 80014d4  80014d4        0     1                 $t
+ 80014d5  80014d5       1a     1                 OUTLINED_FUNCTION_0
+ 80014f0  80014f0       50     4         CMakeFiles/TestNUCLEO.dir/startup_stm32f446xx.s.obj:(.text.Reset_Handler)
+ 80014f0  80014f0        0     1                 $t
+ 80014f1  80014f1       38     1                 Reset_Handler
+ 8001502  8001502        0     1                 CopyDataInit
+ 8001508  8001508        0     1                 LoopCopyDataInit
+ 8001516  8001516        0     1                 FillZerobss
+ 800151a  800151a        0     1                 LoopFillZerobss
+ 8001528  8001528        0     1                 $d
+ 8001540  8001540        2     1         CMakeFiles/TestNUCLEO.dir/startup_stm32f446xx.s.obj:(.text.Default_Handler)
+ 8001540  8001540        0     1                 Infinite_Loop
+ 8001540  8001540        0     1                 $t
+ 8001540  8001540        2     1                 Default_Handler
+ 8001541  8001541        2     1                 WWDG_IRQHandler
+ 8001541  8001541        2     1                 PVD_IRQHandler
+ 8001541  8001541        2     1                 TAMP_STAMP_IRQHandler
+ 8001541  8001541        2     1                 RTC_WKUP_IRQHandler
+ 8001541  8001541        2     1                 FLASH_IRQHandler
+ 8001541  8001541        2     1                 RCC_IRQHandler
+ 8001541  8001541        2     1                 EXTI0_IRQHandler
+ 8001541  8001541        2     1                 EXTI1_IRQHandler
+ 8001541  8001541        2     1                 EXTI2_IRQHandler
+ 8001541  8001541        2     1                 EXTI3_IRQHandler
+ 8001541  8001541        2     1                 EXTI4_IRQHandler
+ 8001541  8001541        2     1                 DMA1_Stream0_IRQHandler
+ 8001541  8001541        2     1                 DMA1_Stream1_IRQHandler
+ 8001541  8001541        2     1                 DMA1_Stream2_IRQHandler
+ 8001541  8001541        2     1                 DMA1_Stream3_IRQHandler
+ 8001541  8001541        2     1                 DMA1_Stream4_IRQHandler
+ 8001541  8001541        2     1                 DMA1_Stream5_IRQHandler
+ 8001541  8001541        2     1                 DMA1_Stream6_IRQHandler
+ 8001541  8001541        2     1                 ADC_IRQHandler
+ 8001541  8001541        2     1                 CAN1_TX_IRQHandler
+ 8001541  8001541        2     1                 CAN1_RX0_IRQHandler
+ 8001541  8001541        2     1                 CAN1_RX1_IRQHandler
+ 8001541  8001541        2     1                 CAN1_SCE_IRQHandler
+ 8001541  8001541        2     1                 EXTI9_5_IRQHandler
+ 8001541  8001541        2     1                 TIM1_BRK_TIM9_IRQHandler
+ 8001541  8001541        2     1                 TIM1_UP_TIM10_IRQHandler
+ 8001541  8001541        2     1                 TIM1_TRG_COM_TIM11_IRQHandler
+ 8001541  8001541        2     1                 TIM1_CC_IRQHandler
+ 8001541  8001541        2     1                 TIM2_IRQHandler
+ 8001541  8001541        2     1                 TIM3_IRQHandler
+ 8001541  8001541        2     1                 TIM4_IRQHandler
+ 8001541  8001541        2     1                 I2C1_EV_IRQHandler
+ 8001541  8001541        2     1                 I2C1_ER_IRQHandler
+ 8001541  8001541        2     1                 I2C2_EV_IRQHandler
+ 8001541  8001541        2     1                 I2C2_ER_IRQHandler
+ 8001541  8001541        2     1                 SPI1_IRQHandler
+ 8001541  8001541        2     1                 SPI2_IRQHandler
+ 8001541  8001541        2     1                 USART3_IRQHandler
+ 8001541  8001541        2     1                 RTC_Alarm_IRQHandler
+ 8001541  8001541        2     1                 OTG_FS_WKUP_IRQHandler
+ 8001541  8001541        2     1                 TIM8_BRK_TIM12_IRQHandler
+ 8001541  8001541        2     1                 TIM8_UP_TIM13_IRQHandler
+ 8001541  8001541        2     1                 TIM8_TRG_COM_TIM14_IRQHandler
+ 8001541  8001541        2     1                 TIM8_CC_IRQHandler
+ 8001541  8001541        2     1                 DMA1_Stream7_IRQHandler
+ 8001541  8001541        2     1                 FMC_IRQHandler
+ 8001541  8001541        2     1                 SDIO_IRQHandler
+ 8001541  8001541        2     1                 TIM5_IRQHandler
+ 8001541  8001541        2     1                 SPI3_IRQHandler
+ 8001541  8001541        2     1                 UART4_IRQHandler
+ 8001541  8001541        2     1                 UART5_IRQHandler
+ 8001541  8001541        2     1                 TIM6_DAC_IRQHandler
+ 8001541  8001541        2     1                 TIM7_IRQHandler
+ 8001541  8001541        2     1                 DMA2_Stream0_IRQHandler
+ 8001541  8001541        2     1                 DMA2_Stream1_IRQHandler
+ 8001541  8001541        2     1                 DMA2_Stream2_IRQHandler
+ 8001541  8001541        2     1                 DMA2_Stream3_IRQHandler
+ 8001541  8001541        2     1                 DMA2_Stream4_IRQHandler
+ 8001541  8001541        2     1                 CAN2_TX_IRQHandler
+ 8001541  8001541        2     1                 CAN2_RX0_IRQHandler
+ 8001541  8001541        2     1                 CAN2_RX1_IRQHandler
+ 8001541  8001541        2     1                 CAN2_SCE_IRQHandler
+ 8001541  8001541        2     1                 OTG_FS_IRQHandler
+ 8001541  8001541        2     1                 DMA2_Stream5_IRQHandler
+ 8001541  8001541        2     1                 DMA2_Stream6_IRQHandler
+ 8001541  8001541        2     1                 DMA2_Stream7_IRQHandler
+ 8001541  8001541        2     1                 USART6_IRQHandler
+ 8001541  8001541        2     1                 I2C3_EV_IRQHandler
+ 8001541  8001541        2     1                 I2C3_ER_IRQHandler
+ 8001541  8001541        2     1                 OTG_HS_EP1_OUT_IRQHandler
+ 8001541  8001541        2     1                 OTG_HS_EP1_IN_IRQHandler
+ 8001541  8001541        2     1                 OTG_HS_WKUP_IRQHandler
+ 8001541  8001541        2     1                 OTG_HS_IRQHandler
+ 8001541  8001541        2     1                 DCMI_IRQHandler
+ 8001541  8001541        2     1                 FPU_IRQHandler
+ 8001541  8001541        2     1                 SPI4_IRQHandler
+ 8001541  8001541        2     1                 SAI1_IRQHandler
+ 8001541  8001541        2     1                 SAI2_IRQHandler
+ 8001541  8001541        2     1                 QUADSPI_IRQHandler
+ 8001541  8001541        2     1                 CEC_IRQHandler
+ 8001541  8001541        2     1                 SPDIF_RX_IRQHandler
+ 8001541  8001541        2     1                 FMPI2C1_EV_IRQHandler
+ 8001541  8001541        2     1                 FMPI2C1_ER_IRQHandler
+ 8001544  8001544      1be     4         /Users/matiasvinkovic/Library/Application Support/stm32cube/bundles/st-arm-clang/21.1.1+st.7/bin/../lib/clang-runtimes/arm-none-eabi/armv7m_hard_fpv4_sp_d16_exn_rtti_unaligned_size/lib/libclang_rt.builtins.a(udivmoddi4.c.obj):(.text.__udivmoddi4)
+ 8001544  8001544        0     1                 $t
+ 8001545  8001545      1be     1                 __udivmoddi4
+ 8001702  8001702        8     2         /Users/matiasvinkovic/Library/Application Support/stm32cube/bundles/st-arm-clang/21.1.1+st.7/bin/../lib/clang-runtimes/arm-none-eabi/armv7m_hard_fpv4_sp_d16_exn_rtti_unaligned_size/lib/libc.a(bzero.c.o):(.text.bzero)
+ 8001702  8001702        0     1                 $t
+ 8001703  8001703        8     1                 bzero
+ 8001703  8001703        8     1                 __aeabi_memclr4
+ 8001703  8001703        8     1                 __aeabi_memclr8
+ 8001703  8001703        8     1                 __aeabi_memclr
+ 800170a  800170a        e     2         /Users/matiasvinkovic/Library/Application Support/stm32cube/bundles/st-arm-clang/21.1.1+st.7/bin/../lib/clang-runtimes/arm-none-eabi/armv7m_hard_fpv4_sp_d16_exn_rtti_unaligned_size/lib/libc.a(memset.c.o):(.text.memset)
+ 800170a  800170a        0     1                 $t
+ 800170b  800170b        e     1                 memset
+ 8001718  8001718       30     4         /Users/matiasvinkovic/Library/Application Support/stm32cube/bundles/st-arm-clang/21.1.1+st.7/bin/../lib/clang-runtimes/arm-none-eabi/armv7m_hard_fpv4_sp_d16_exn_rtti_unaligned_size/lib/libc.a(libc_misc_init.c.o):(.text.__libc_init_array)
+ 8001718  8001718        0     1                 $t
+ 8001719  8001719       30     1                 __libc_init_array
+ 8001738  8001738        0     1                 $d
+ 8001748  8001748       10     4         /Users/matiasvinkovic/Library/Application Support/stm32cube/bundles/st-arm-clang/21.1.1+st.7/bin/../lib/clang-runtimes/arm-none-eabi/armv7m_hard_fpv4_sp_d16_exn_rtti_unaligned_size/lib/libc.a(libc_picolib_machine_arm_read_tp.S.o):(.text._initial_set_tls)
+ 8001748  8001748        0     1                 $t
+ 8001749  8001749        6     1                 _initial_set_tls
+ 8001750  8001750        0     1                 $d
+ 8001758  8001758       14     4         /Users/matiasvinkovic/Library/Application Support/stm32cube/bundles/st-arm-clang/21.1.1+st.7/bin/../lib/clang-runtimes/arm-none-eabi/armv7m_hard_fpv4_sp_d16_exn_rtti_unaligned_size/lib/libc.a(libc_picolib_machine_arm_set_tls.c.o):(.text._set_tls)
+ 8001758  8001758        0     1                 $t
+ 8001759  8001759       14     1                 _set_tls
+ 8001764  8001764        0     1                 $d
+ 800176c  800176c        0     1         . = ALIGN(4)
+ 800176c  800176c        0     1         _etext = .
+ 800176c  800176c       18     1 .rodata
+ 800176c  800176c        0     1         . = ALIGN(4)
+ 800176c  800176c       10     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.obj:(.rodata.AHBPrescTable)
+ 800176c  800176c       10     1                 AHBPrescTable
+ 800177c  800177c        8     1         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.obj:(.rodata.APBPrescTable)
+ 800177c  800177c        8     1                 APBPrescTable
+ 8001784  8001784        0     1         . = ALIGN(4)
+ 8001784  8001784        0     1 .ARM.extab
+ 8001784  8001784        0     1         . = ALIGN(4)
+ 8001784  8001784        0     1         . = ALIGN(4)
+ 8001784  8001784       10     4 .ARM
+ 8001784  8001784        0     1         . = ALIGN(4)
+ 8001784  8001784        0     1         __exidx_start = .
+ 8001784  8001784       10     4         <internal>:(.ARM.exidx)
+ 8001794  8001794        0     1         __exidx_end = .
+ 8001794  8001794        0     1         . = ALIGN(4)
+ 8001794  8001794        4     4 .preinit_array
+ 8001794  8001794        0     1         . = ALIGN(4)
+ 8001794  8001794        0     1         PROVIDE_HIDDEN (__preinit_array_start = .)
+ 8001794  8001794        4     4         /Users/matiasvinkovic/Library/Application Support/stm32cube/bundles/st-arm-clang/21.1.1+st.7/bin/../lib/clang-runtimes/arm-none-eabi/armv7m_hard_fpv4_sp_d16_exn_rtti_unaligned_size/lib/libc.a(libc_picolib_machine_arm_read_tp.S.o):(.preinit_array)
+ 8001798  8001798        0     1         PROVIDE_HIDDEN (__preinit_array_end = .)
+ 8001798  8001798        0     1         . = ALIGN(4)
+ 8001798  8001798        0     1 .init_array
+ 8001798  8001798        0     1         . = ALIGN(4)
+ 8001798  8001798        0     1         PROVIDE_HIDDEN (__init_array_start = .)
+ 8001798  8001798        0     1         PROVIDE_HIDDEN (__init_array_end = .)
+ 8001798  8001798        0     1         . = ALIGN(4)
+ 8001798  8001798        0     1 .fini_array
+ 8001798  8001798        0     1         . = ALIGN(4)
+ 8001798  8001798        0     1         . = ALIGN(4)
+ 8001798  8001798        0     1 _sidata = LOADADDR(.data)
+20000000  8001798        c     4 .data
+20000000  8001798        0     1         . = ALIGN(4)
+20000000  8001798        0     1         _sdata = .
+20000000  8001798        4     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.obj:(.data.SystemCoreClock)
+20000000  8001798        4     1                 SystemCoreClock
+20000004  800179c        8     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj:(.data..L_MergedGlobals)
+20000004  800179c        1     1                 uwTickFreq
+20000008  80017a0        4     1                 uwTickPrio
+2000000c  80017a4        0     1         . = ALIGN(4)
+2000000c  80017a4        0     4 .tdata
+2000000c  80017a4        0     1         . = ALIGN(4)
+2000000c  80017a4        0     1         _edata = .
+2000000c  80017a4        0     1 PROVIDE( __tdata_start = ADDR(.tdata) )
+2000000c 2000000c        0     4 .tbss
+2000000c 2000000c        0     1         _sbss = .
+2000000c 2000000c        0     1         __bss_start__ = _sbss
+2000000c 2000000c        0     1         . = ALIGN(4)
+2000000c 2000000c        0     1 PROVIDE( __tls_base = __tdata_start )
+2000000c 2000000c        0     1 PROVIDE( __tls_align = MAX(ALIGNOF(.tdata), ALIGNOF(.tbss)) )
+2000000c 2000000c        0     1 PROVIDE( __arm32_tls_tcb_offset = MAX(8, __tls_align) )
+2000000c 2000000c       c4     4 .bss
+2000000c 2000000c        4     4         cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj:(.bss.uwTick)
+2000000c 2000000c        4     1                 uwTick
+20000010 20000010       48     4         CMakeFiles/TestNUCLEO.dir/Core/Src/main.c.obj:(.bss.huart1)
+20000010 20000010       48     1                 huart1
+20000058 20000058       74     4         CMakeFiles/TestNUCLEO.dir/Core/Src/main.c.obj:(.bss..L_MergedGlobals)
+20000058 20000058        1     1                 current_role
+20000059 20000059        1     1                 current_led_mode
+2000005a 2000005a        1     1                 button_press_count
+2000005b 2000005b        1     1                 rx2_byte
+2000005c 2000005c        1     1                 rx1_byte
+2000005d 2000005d        1     1                 receiving_frame
+2000005e 2000005e        1     1                 rx_index
+20000060 20000060        4     1                 current_key
+20000064 20000064        4     1                 last_button_time
+20000068 20000068       1a     1                 rx_buffer
+20000084 20000084       48     1                 huart2
+200000cc 200000cc        4     4         /Users/matiasvinkovic/Library/Application Support/stm32cube/bundles/st-arm-clang/21.1.1+st.7/bin/../lib/clang-runtimes/arm-none-eabi/armv7m_hard_fpv4_sp_d16_exn_rtti_unaligned_size/lib/libc.a(libc_picolib_machine_arm_tls.c.o):(.bss.__tls)
+200000cc 200000cc        4     1                 __tls
+200000d0 200000d0        0     1         . = ALIGN(4)
+200000d0 200000d0        0     1         _ebss = .
+200000d0 200000d0        0     1         __bss_end__ = _ebss
+200000d0 200000d0      600     1 ._user_heap_stack
+200000d0 200000d0        0     1         . = ALIGN(8)
+200000d0 200000d0        0     1         PROVIDE ( _end = . )
+200000d0 200000d0      200     1         . = . + _Min_Heap_Size
+200002d0 200002d0      400     1         . = . + _Min_Stack_Size
+200006d0 200006d0        0     1         . = ALIGN(8)
        0        0       92     1 .comment
        0        0       92     1         <internal>:(.comment)
        0        0       4d     1 .ARM.attributes
        0        0       4d     1         <internal>:(.ARM.attributes)
        0        0       34     4 .debug_frame
        0        0       34     4         /Users/matiasvinkovic/Library/Application Support/stm32cube/bundles/st-arm-clang/21.1.1+st.7/bin/../lib/clang-runtimes/arm-none-eabi/armv7m_hard_fpv4_sp_d16_exn_rtti_unaligned_size/lib/libc.a(libc_picolib_machine_arm_read_tp.S.o):(.debug_frame)
-       0        0     1900     4 .symtab
-       0        0     1900     4         <internal>:(.symtab)
+       0        0     1870     4 .symtab
+       0        0     1870     4         <internal>:(.symtab)
        0        0       bc     1 .shstrtab
        0        0       bc     1         <internal>:(.shstrtab)
-       0        0     13aa     1 .strtab
-       0        0     13aa     1         <internal>:(.strtab)
+       0        0     134b     1 .strtab
+       0        0     134b     1         <internal>:(.strtab)

@@ -287,49 +287,50 @@ void process_received_frame(ProtocolMessage_t *msg, UART_HandleTypeDef *source_h
     uint16_t expected_len = sizeof(ProtocolMessage_t) - sizeof(uint16_t);
     uint16_t local_crc = compute_crc16((uint8_t*)msg, expected_len);
 
-    if (local_crc != msg->crc) {
-        current_led_mode = LED_MODE_ERROR;
-        return;
+    // Si le message vient d'une autre carte (USART1), on contrôle strictement le CRC
+    if (source_huart == &huart1) {
+        if (local_crc != msg->crc) {
+            current_led_mode = LED_MODE_ERROR; // Clignote à 5 Hz
+            return;
+        }
     }
 
     switch (msg->header.command_type) {
         case CMD_INIT:
             if (msg->header.id_src == DEFAULT_ID) {
+                // Initialisation commandée par le PC
                 current_role = NODE_ROLE_MASTER;
                 current_key = HAL_GetTick() ^ 0xA5A5A5A5;
                 if (current_key == 0) current_key = 0x12345678;
-                current_led_mode = LED_MODE_SYNC;
-
-                ProtocolMessage_t out_msg;
-                memset(&out_msg, 0, sizeof(out_msg));
-                out_msg.header.start_byte = ICD_START_BYTE;
-                out_msg.header.command_type = CMD_INIT;
-                out_msg.header.id_src = my_id;
-                out_msg.header.length = 4;
-                memcpy(out_msg.payload, &current_key, 4);
-                out_msg.crc = compute_crc16((uint8_t*)&out_msg, expected_len);
-                HAL_UART_Transmit(&huart1, (uint8_t*)&out_msg, sizeof(out_msg), 100);
-            } else {
-                current_role = NODE_ROLE_SLAVE;
-                memcpy(&current_key, msg->payload, 4);
-                current_led_mode = LED_MODE_SYNC;
-
-                ProtocolMessage_t ack_msg;
-                memset(&ack_msg, 0, sizeof(ack_msg));
-                ack_msg.header.start_byte = ICD_START_BYTE;
-                ack_msg.header.command_type = CMD_ACK;
-                ack_msg.header.id_src = my_id;
-                ack_msg.crc = compute_crc16((uint8_t*)&ack_msg, expected_len);
-                HAL_UART_Transmit(source_huart, (uint8_t*)&ack_msg, sizeof(ack_msg), 100);
+                
+                current_led_mode = LED_MODE_SYNC; // LED FIXE !
             }
             break;
-
+            
         case CMD_MSG:
-            if (current_role == NODE_ROLE_MASTER) {
+            // 1. Message venant du PC (USART2) -> On chiffre et on envoie sur la ligne inter-cartes (USART1)
+            if (source_huart == &huart2) {
+                // Chiffrement du texte dans le payload
                 xor_cipher(msg->payload, msg->header.length, current_key);
+                
+                // Préparation du message à transmettre
                 msg->header.id_src = my_id;
-                msg->crc = compute_crc16((uint8_t*)msg, expected_len);
+                uint16_t out_len = sizeof(ProtocolMessage_t) - sizeof(uint16_t);
+                msg->crc = compute_crc16((uint8_t*)msg, out_len);
+                
+                // Émission sur USART1 (PA9)
                 HAL_UART_Transmit(&huart1, (uint8_t*)msg, sizeof(ProtocolMessage_t), 100);
+            }
+            // 2. Message reçu depuis l'autre carte (USART1 / PA10) -> Déchiffrement et restitution
+            else if (source_huart == &huart1) {
+                // Déchiffrement avec la même clé
+                xor_cipher(msg->payload, msg->header.length, current_key);
+
+                // Envoi du texte clair vers le PC (USART2 / USB) pour affichage terminal
+                char log_buffer[64];
+                snprintf(log_buffer, sizeof(log_buffer), "\r\n[RECU EN CLAIR] : %.*s\r\n", 
+                         msg->header.length, msg->payload);
+                HAL_UART_Transmit(&huart2, (uint8_t*)log_buffer, strlen(log_buffer), 100);
             }
             break;
 
@@ -337,7 +338,6 @@ void process_received_frame(ProtocolMessage_t *msg, UART_HandleTypeDef *source_h
             break;
     }
 }
-
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart) {
     uint8_t byte = (huart == &huart2) ? rx2_byte : rx1_byte;
 
