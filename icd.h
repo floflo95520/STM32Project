@@ -1,52 +1,36 @@
-#ifndef ICD_H
-#define ICD_H
+#ifndef PROTOCOL_ICD_H
+#define PROTOCOL_ICD_H
 
 #include <stdint.h>
 
-// attribute(packed) dans toutes les structures qui transitent
+#define ICD_START_BYTE 0x7E
+#define MAX_PAYLOAD_SIZE 16
+#define DEFAULT_ID 0X0
 
-#define MAX_PAYLOAD_SIZE 16 // Taille max du payload
-
-// Flags de commands
+// Flags
 typedef enum {
-    CMD_INIT_RESET = 0x00,
-    CMD_MESSAGE    = 0x01,
-    CMD_ERR        = 0x02, // on sait pas quel type d'erreur on va avoir donc on fait pas une enum pour le moment
-    CMD_GET_KEY    = 0x03, //demander la clé de chiffrement
-    CMD_UPDT_KEY   = 0x04,
-    CMD_ACK        = 0x05, //retour du n+1
-    CMD_GET_INFO   = 0x06, // Demande info carte
-    CMD_INFO_RESP  = 0x07, // Réponse GET_INFO 
-    CMD_KEY_RESP   = 0x08  // Réponse GET_KEY 
-} CommandType;
-
-// status de la carte
-typedef enum {
-    STATUS_UNKNOWN = 0x00,
-    STATUS_MASTER  = 0x01,
-    STATUS_SLAVE   = 0x02
-} NodeStatus;
+    CMD_INIT  = 0x00, // Initialisation
+    CMD_RESET = 0x01, // Réinitialisation
+    CMD_ACK   = 0x02, // Bonne réception du message
+    CMD_MSG   = 0x03, // Transmission d'un message texte
+    CMD_ERROR = 0x04  // Erreur 
+} CommandType_t;
 
 // Header
-typedef struct __attribute__((packed)){
-    uint32_t  id_src;          // taille d'origine 96 bits mais en prenant qu'un registre sur 3, on arrive à 32, ou alors passer par le crc
-    uint8_t  length;          // combien d'octets dans le payload ?
-    uint8_t  command_type;     
-} FrameHeader;
-//pour garantir que la taille de la structure en RAM est exactement la meme que la structure envoyée
+typedef struct __attribute__((packed)) {
+    uint8_t  start_byte;      // Octet de début de trame (0x7E)
+    uint8_t  command_type;   // Type de commande issue de CommandType_t (1 octet)
+    uint8_t  length;         // Taille utile du payload (1 octet)
+    uint8_t reserve;        // Reserve d'alignement
+    uint32_t id_src;         // Identifiant de la source (4 octets)
+} MessageHeader_t;
 
-//erreur : 
 
-// Payload
-typedef struct __attribute__((packed)){ 
-    uint8_t data[MAX_PAYLOAD_SIZE]; // Réserve toujours 16 octets en mémoire
-} Payload;
+// La trame complète circulant entre les nœuds
+typedef struct __attribute__((packed)) {
+    MessageHeader_t header;
+    uint8_t         payload[MAX_PAYLOAD_SIZE]; // Les données (16 octets max)
+    uint16_t        crc;
+} ProtocolMessage_t;
 
-// Structure Globale du Message
-typedef struct __attribute__((packed)){ // Ajout packed obligatoire pour éviter le padding avec crc16
-    FrameHeader header;
-    Payload     payload;
-    uint16_t    crc16;        
-} GlobalMessage;
-
-#endif // ICD_H
+#endif // PROTOCOL_ICD_H
