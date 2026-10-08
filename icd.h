@@ -11,7 +11,7 @@ typedef enum {
     CMD_MESSAGE    = 0x01,
     CMD_GET_KEY    = 0x03, //demander la clé de chiffrement
     CMD_UPDT_KEY   = 0x04,
-    CMD_ACK        = 0x05 //retour du n+1
+    CMD_ACK        = 0x05, //retour du n+1
     CMD_ERR        = 0x02
 } CommandType;
 
@@ -23,11 +23,11 @@ typedef enum {
 } NodeStatus;
 
 // Header
-typedef struct {
+typedef struct __attribute__((packed)){
     uint32_t id_src;
     uint8_t length;           // combien d'octets dans le payload ?
     uint8_t command_type;     
-}__attribute__((packed))FrameHeader;
+} FrameHeader;
 //pour garantir que la taille de la structure en RAM est exactement la meme que la structure envoyée
 
 //erreur : 
