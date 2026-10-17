@@ -51,7 +51,7 @@ UART_HandleTypeDef huart2;
 NodeRole_t current_role = NODE_ROLE_UNASSIGNED;
 LedState_t current_led_mode = LED_MODE_WAIT_INIT;
 uint32_t   current_key = 0;
-uint32_t   my_id = 0xCAFEBABE; // ID de la carte, à changer pour prendre le vrai ID
+uint32_t   my_id = HAL_GetUIDw0();; // ID de la carte, à changer pour prendre le vrai ID
 
 // Compteur du bouton
 volatile uint8_t  button_press_count = 0;
